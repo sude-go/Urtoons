@@ -1,0 +1,17 @@
+.MangaList{
+    background: var(--primary-color);
+    height: 100vh;
+    padding: 2em;
+}
+.Mangas{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+@media (max-width: 768px){
+    .Mangas{
+        justify-content: center;
+    }
+}
+

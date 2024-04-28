@@ -1,0 +1,13 @@
+.Banner {
+    background-image: linear-gradient(to bottom, rgba(92,81,159,0) 70%, rgba(92,81,159,1) 100%), url('../../assest/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    align-content: flex-end;
+    display: grid;
+    justify-items: center;
+}
+
+.HomePage {
+    background: var(--primary-color-light);
+}
