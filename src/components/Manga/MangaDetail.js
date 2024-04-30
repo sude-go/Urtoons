@@ -6,18 +6,34 @@ import Paper from '@mui/material/Paper';
 import {Grid} from "@mui/material";
 import logo from '../../assest/logo.jpg'
 import Navbar from "../Containers/Navbar/Navbar";
+import MangaImg1 from "../../assest/7.png";
+import Button from "@mui/material/Button";
+import {Link} from "react-router-dom";
 
 
 const MangaDetail = ({mangaId}) => {
 
     const mangas = [
-        {id: 1, title: 'One Piece', author: 'Eiichiro Oda', description: 'Bu, korsanlar hakkında bir manga...'},
-        {id: 2, title: 'Attack on Titan', author: 'Hajime Isayama', description: 'Bu, devler hakkında bir manga...'},
+        {
+            id: 1,
+            title: 'One Piece',
+            author: 'Eiichiro Oda',
+            description: 'Bu, korsanlar hakkında bir manga...',
+            mangaImg: MangaImg1
+        },
+        {
+            id: 2,
+            title: 'Attack on Titan',
+            author: 'Hajime Isayama',
+            description: 'Bu, devler hakkında bir manga...',
+            mangaImg: MangaImg1
+        },
         {
             id: 3,
             title: 'My Hero Academia',
             author: 'Kohei Horikoshi',
-            description: 'Bu, süper kahramanlar hakkında bir manga...'
+            description: 'Bu, süper kahramanlar hakkında bir manga...',
+            mangaImg: MangaImg1
         },
     ];
 
@@ -49,6 +65,11 @@ const MangaDetail = ({mangaId}) => {
                     <Grid item xs={4}>
                         <Item>
                             <img src={logo} alt="Logo"/>
+                            <Button>
+                                <Link to={`/mangalar/${manga.id}/read`}>
+                                    {manga.title} oku
+                                </Link>
+                            </Button>
                         </Item>
                     </Grid>
                     <Grid item xs={6}>
@@ -62,7 +83,9 @@ const MangaDetail = ({mangaId}) => {
                 </Grid>
             </Box>
         </div>
-    );
+    )
+        ;
 };
 
 export default MangaDetail;
+

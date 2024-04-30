@@ -5,13 +5,14 @@ import Typography from "@mui/material/Typography";
 import {Card, CardActionArea, CardContent, CardMedia} from "@mui/material";
 import Divider from '@mui/material/Divider';
 import Navbar from "../Containers/Navbar/Navbar";
+import MangaImg1 from "../../assest/7.png";
 
 const MangaList = () => {
 
     const mangas = [
-        {id: 1, title: 'One Piece', author: 'Eiichiro Oda'},
-        {id: 2, title: 'Attack on Titan', author: 'Hajime Isayama'},
-        {id: 3, title: 'My Hero Academia', author: 'Kohei Horikoshi'},
+        {id: 1, title: 'One Piece', author: 'Eiichiro Oda', mangaImg: MangaImg1},
+        {id: 2, title: 'Attack on Titan', author: 'Hajime Isayama', mangaImg: MangaImg1},
+        {id: 3, title: 'My Hero Academia', author: 'Kohei Horikoshi', mangaImg: MangaImg1},
     ];
     const style = {
        marginTop: 10,
@@ -34,8 +35,8 @@ const MangaList = () => {
                                     <CardMedia
                                         component="img"
                                         height="140"
-                                        image="/static/images/cards/contemplative-reptile.jpg"
-                                        alt="green iguana"
+                                        image=""
+                                        alt=""
                                     />
                                     <CardContent sx={{height: 184}}>
                                         <Typography gutterBottom variant="h5" component="div">
